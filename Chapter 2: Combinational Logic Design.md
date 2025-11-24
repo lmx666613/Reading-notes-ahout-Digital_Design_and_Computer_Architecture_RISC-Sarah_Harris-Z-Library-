@@ -32,8 +32,8 @@ A circuit is combinational if:
 ## 2.2 Boolean Equations
 
 ### Terminology
-- **Complement**: Inverse of variable (`A`)
-- **Literal**: Variable or its complement (`A`, `A`, `B`, `B`)
+- **Complement**: Inverse of variable (`¬A`)
+- **Literal**: Variable or its complement (`A`, `¬A`, `B`, `¬B`)
 - **Implicant**: AND of one or more literals (`AB`, `ABC`, `B`)
 - **Minterm**: Product involving ALL inputs to function (`ABC` for 3 variables)
 - **Maxterm**: Sum involving ALL inputs to function (`A+B+C` for 3 variables)
@@ -71,8 +71,8 @@ A circuit is combinational if:
 - **Identity**: `B·1 = B`, `B+0 = B`
 - **Null Element**: `B·0 = 0`, `B+1 = 1`
 - **Idempotency**: `B·B = B`, `B+B = B`
-- **Involution**: `B = B`
-- **Complements**: `B·B = 0`, `B+B = 1`
+- **Involution**: `¬(¬B) = B`
+- **Complements**: `¬B·B = 0`, `¬B+B = 1`
 
 #### Multi-Variable Theorems
 - **Commutativity**: `B·C = C·B`, `B+C = C+B`
@@ -80,8 +80,8 @@ A circuit is combinational if:
 - **Distributivity**: `B·(C+D) = (B·C)+(B·D)`, `B+(C·D) = (B+C)·(B+D)`
 - **Covering**: `B·(B+C) = B`, `B+(B·C) = B`
 - **Combining**: `(B·C)+(B·C) = B`, `(B+C)·(B+C) = B`
-- **Consensus**: `(B·C)+(B·D)+(C·D) = (B·C)+(B·D)`
-- **De Morgan's**: `(B·C) = B + C`, `(B+C) = B · C`
+- **Consensus**: `(B·C)+(¬B·D)+(C·D) = (B·C)+(¬B·D)`
+- **De Morgan's**: `¬(B·C) = ¬B + ¬C`, `¬(B+C) = ¬B · ¬C`
 
 ### Proof Methods
 - **Perfect Induction**: Prove by testing all possible input combinations
